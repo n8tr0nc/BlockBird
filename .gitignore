@@ -1,0 +1,9 @@
+# Ignore Windows system files
+desktop.ini
+Thumbs.db
+ehthumbs.db
+
+# Node or extension builds (optional if you have these)
+node_modules/
+dist/
+build/
