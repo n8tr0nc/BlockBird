@@ -126,3 +126,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial fetch and render
   fetchBlockchainData();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof initializeTranslations === 'function') {
+    initializeTranslations();
+  }
+});

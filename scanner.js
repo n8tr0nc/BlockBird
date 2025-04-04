@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   initializeScanner();
 
   function initializeScanner() {
@@ -14,8 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function loadLanguage(lang) {
-      fetch(`languages/${lang}.json`)  // Updated path to load from the languages folder
-        .then(response => response.json())
+      fetch(`languages/${lang}.json`)
+        .then(response => {
+          if (!response.ok) throw new Error(`Failed to load: ${lang}.json`);
+          return response.json();
+        })
         .then(data => {
           translations = data;
           applyTranslations(translations);
@@ -24,9 +27,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initializeTranslations() {
-      chrome.storage.local.get(['language'], function(result) {
-        const userLang = result.language || navigator.language.split('-')[0] || 'en';
-        loadLanguage(userLang);
+      chrome.storage.local.get(['language'], function (result) {
+        const fallback = navigator.language.split('-')[0].toLowerCase();
+        const langMap = {
+          en: 'english', id: 'indonesian', es: 'spanish', ru: 'russian', vi: 'vietnamese',
+          hi: 'hindi', th: 'thai', zh: 'mandarin', ha: 'hausa', ur: 'urdu',
+          tl: 'filipino', uk: 'ukrainian', pt: 'brazilian'
+        };
+
+        let langFile = result.language;
+        if (!Object.values(langMap).includes(langFile)) {
+          const fallbackCode = fallback in langMap ? langMap[fallback] : 'english';
+          langFile = langMap[langFile] || fallbackCode;
+        }
+
+        loadLanguage(langFile);
       });
     }
 
@@ -39,12 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const countContainer = document.getElementById('count');
     const currentUrlContainer = document.getElementById('current-url');
 
-    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       currentUrlContainer.textContent = `URL: ${tabs[0].url}`;
     });
 
     scanButton.addEventListener('click', () => {
-      chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+      chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         showLoading(true);
         chrome.scripting.executeScript(
           {
@@ -67,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     clearButton.addEventListener('click', () => {
-      chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+      chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.scripting.executeScript(
           {
             target: { tabId: tabs[0].id },
@@ -119,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
 
-      // Inject the CSS into the page
       const style = document.createElement('style');
       style.textContent = css;
       document.head.appendChild(style);
@@ -182,8 +196,5 @@ document.addEventListener('DOMContentLoaded', function() {
         alertContainer.style.display = 'none';
       }, 5000);
     }
-
-    // Call the function to populate navigation links after initialization
-    window.populateNavLinks();  // Ensure this function is defined in scripts.js
   }
 });

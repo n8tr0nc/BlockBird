@@ -4,26 +4,34 @@
   <title>Scanner</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script src="translations.js"></script>
-  <script src="scripts.js" defer></script>
-  <script src="scanner.js"></script>
 </head>
 <body>
+
+  <!--Header-->
   <div class="header">
-    <h1 data-translate="scanner">Scanner</h1>
-    <a href="settings.html" class="settings-icon tooltip">
-      <i class="fas fa-cog"></i><span class="tooltiptext" data-translate="settings">Settings</span>
-    </a>
-    <span class="info-icon tooltip">
-      <i class="fas fa-info-circle"></i>
-      <span class="tooltiptext" data-translate="scanner_help">
-        <p data-translate="scanner_description">Scan the page for signs of an airdrop or points system</p>
-      </span>
-    </span>
-    <a href="https://t.me/blockbirdchat" target="_blank" class="telegram-icon tooltip">
-      <i class="fa-brands fa-telegram"></i><span class="tooltiptext" data-translate="contact">Contact</span>
-    </a>
+    <div class="heading">
+      <h1 data-translate="scanner">Scanner</h1>
+      <!--Info-->
+      <a class="info-icon tooltip tooltip-unanchored">
+        <i class="fa-solid fa-circle-info"></i>
+        <span class="tooltiptext" data-translate="scanner_help">
+          <p data-translate="scanner_description">Scan the page for signs of an airdrop or points system</p>
+        </span>
+      </a>
+    </div>
+    <div class="toolbar">
+      <!--Settings-->
+      <a href="settings.html" class="settings-icon tooltip tooltip-left">
+        <i class="fa-solid fa-gear"></i><span class="tooltiptext" data-translate="settings">Settings</span>
+      </a>
+      <!--Contact-->
+      <a href="https://t.me/blockbirdchat" target="_blank" class="telegram-icon tooltip tooltip-left">
+        <i class="fa-brands fa-telegram"></i><span class="tooltiptext" data-translate="contact">Contact</span>
+      </a>
+    </div>
   </div>
+
+  <!--Scan Control-->
   <div class="scan-control">
     <div id="current-url"></div>
     <a id="scan-button" class="scanner-button" data-translate="scan">Scan</a>
@@ -37,5 +45,14 @@
   <div class="footer">
     <div id="nav-container"></div>
   </div>
+
+  <!--Scripts-->
+  <script src="dark-mode.js"></script>
+  <script src="default-page.js"></script>
+  <script src="include-links.js"></script>
+  <script src="panel-layout.js"></script>
+  <script src="translations.js"></script> 
+  <script src="scanner.js"></script>
+
 </body>
 </html>

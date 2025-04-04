@@ -1,46 +1,76 @@
 <!DOCTYPE html>
 <html>
+
+<!--Head-->
 <head>
   <title data-translate="dashboard">BlockBird Web3 & Blockchain Tools For Everyone</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script src="translations.js"></script>
-  <script src="scripts.js" defer></script>
-  <script src="setup.js"></script>
 </head>
-<body>
+
+<!--Body-->
+<body class="hidden">
+
+  <!--Header-->
   <div class="header">
-    <h1 data-translate="dashboard">Dashboard</h1>
-    <a href="settings.html" class="settings-icon tooltip">
-      <i class="fas fa-cog"></i><span class="tooltiptext" data-translate="settings">Settings</span>
-    </a>
-    <span class="info-icon tooltip">
-      <a href="https://airdropbird.com/blockbird" target="_blank"><i class="fas fa-info-circle"></i></a>
-      <span class="tooltiptext" data-translate="dashboard_help">
-        <p data-translate="dashboard_description">Blockchain | Web3 | Crypto</p>
-        <p data-translate="updates">Click to visit our changelog and see the most recent updates.</p>
-      </span>
-    </span>
-    <a href="https://t.me/blockbirdchat" target="_blank" class="telegram-icon tooltip">
+    <div class="heading">
+      <h1 data-translate="dashboard">Dashboard</h1>
+      <!--Info-->
+      <a href="https://airdropbird.com/blockbird" target="_blank" class="info-icon tooltip tooltip-unanchored">
+        <i class="fa-solid fa-circle-info"></i>
+        <span class="tooltiptext" data-translate="dashboard_help">
+          <p data-translate="dashboard_description" style="padding-bottom:4px;">Web3 Toolbox</p>
+          <p data-translate="updates">Click to visit our changelog and see the most recent updates.</p>
+        </span>
+      </a>
+    </div>
+    <div class="toolbar">
+      <!--Settings-->
+      <a href="settings.html" class="settings-icon tooltip tooltip-left">
+        <i class="fa-solid fa-gear"></i><span class="tooltiptext" data-translate="settings">Settings</span>
+      </a>
+      <!--Contact-->
+      <a href="https://t.me/blockbirdchat" target="_blank" class="telegram-icon tooltip tooltip-left">
         <i class="fa-brands fa-telegram"></i><span class="tooltiptext" data-translate="contact">Contact</span>
-    </a>
+      </a>
+    </div>
   </div>
+
+  <!--Setup-->
   <div id="setup-link-container">
     <a id="setup-link" href="settings.html" data-translate="setup_blockbird">Click here to set up your BlockBird</a>
   </div>
+
+  <!--Ads-->
   <div class="ads">
+    <span>
+      <p style="padding:0 10px 10px 10px;width:auto;">Note: The "Tokens" section has been temporarily removed and will be back when v2 is complete. We apologize for any inconvenience and appreciate your patience.</p>
+    </span>
     <a href="https://airdropbird.com" target="_blank">
       <img src="images/ads/airdropbird001.webp" class="banner" />
     </a>
-    <a href="https://airdropbird.com/whalesmarket" target="_blank">
-      <img src="images/ads/whalesmarket001.webp" class="banner" />
+    <a href="https://airdropbird.com/grass" target="_blank">
+      <img src="images/ads/grass001.webp" class="banner" />
     </a>
     <a href="https://airdropbird.com/nord" target="_blank">
       <img src="images/ads/nord001.webp" class="banner" />
     </a>
   </div>
+
+  <!--Footer-->
   <div class="footer">
     <div id="nav-container"></div>
   </div>
+
+  <!--Scripts-->
+  <script src="dark-mode.js"></script>
+  <script src="default-page.js"></script>
+  <script src="include-links.js"></script>
+  <script src="panel-layout.js"></script>
+  <script src="translations.js"></script>
+  <script src="setup.js"></script>
+  <script src="popup.js"></script>
+
 </body>
+
 </html>

@@ -302,3 +302,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadWallets();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+if (typeof initializeTranslations === 'function') {
+    initializeTranslations();
+}
+});  
