@@ -19,6 +19,11 @@ p, li {
   line-height: 1.4rem;
 }
 
+main a {
+  color: white;
+  font-weight: bold;
+}
+
 header, footer {
   width: 100%;
   box-sizing: border-box;
@@ -123,17 +128,13 @@ main .log-container {
   padding: 1rem;
 }
 
-main a {
-  color: white;
-  font-weight: bold;
-}
-
 footer {
   background: #333333;
   color: #ccc;
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
