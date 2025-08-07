@@ -16,7 +16,7 @@ html, body {
 }
 
 p {
-  line-height: 1rem;
+  line-height: 1.4rem;
 }
 
 header, footer {
@@ -107,6 +107,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
