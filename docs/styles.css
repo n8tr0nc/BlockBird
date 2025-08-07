@@ -33,6 +33,7 @@ main {
   background: #222222;
   width: 100%;
   box-sizing: border-box;
+  padding: 2rem 0;
 }
 
 main .install-container {
@@ -44,7 +45,7 @@ main .install-container {
   align-items: flex-start;
   width: 100%;
   box-sizing: border-box;
-  padding: 4rem 1rem 1rem 1rem;
+  padding: 1rem;
 }
 
 main a.install-link {
@@ -55,15 +56,10 @@ main a.install-link {
 }
 
 main .log-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: center;
-  align-items: flex-start;
+  display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 1rem 1rem 4rem 1rem;
+  padding: 1rem;
 }
 
 main a {
@@ -77,6 +73,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
