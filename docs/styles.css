@@ -10,7 +10,7 @@ html, body {
   overflow-x: hidden;
 }
 
-header, nav, footer {
+header, footer {
   width: 100%;
   box-sizing: border-box;
 }
@@ -30,13 +30,6 @@ nav {
   background: #003d80;
   padding: 0.5rem;
   text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 main {
@@ -60,6 +53,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
