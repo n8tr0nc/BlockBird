@@ -15,7 +15,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-p {
+p, li {
   line-height: 1.4rem;
 }
 
@@ -107,6 +107,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
