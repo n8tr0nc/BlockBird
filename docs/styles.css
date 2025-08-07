@@ -10,6 +10,11 @@ html, body {
   overflow-x: hidden;
 }
 
+.install-container {
+  width: 100%;
+  box-sizing: border-box;
+} 
+
 header, footer {
   width: 100%;
   box-sizing: border-box;
@@ -61,6 +66,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
