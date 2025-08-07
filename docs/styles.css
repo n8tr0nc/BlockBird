@@ -81,6 +81,10 @@ main .affiliate-container {
   padding: 1rem;
 }
 
+main .affiliate-container img {
+  width: 100%;
+}
+
 main .log-container {
   display: block;
   width: 100%;
@@ -99,6 +103,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
