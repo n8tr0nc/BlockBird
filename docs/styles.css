@@ -26,12 +26,6 @@ header .logo {
   width: 100px;
 }
 
-nav {
-  background: #003d80;
-  padding: 0.5rem;
-  text-align: center;
-}
-
 main {
   flex: 1;
   padding: 2rem 1rem;
@@ -47,12 +41,20 @@ main a {
   font-weight: bold;
 }
 
+main a.install-link {
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #669900;
+}
+
 footer {
   background: #333333;
   color: #ccc;
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
