@@ -10,12 +10,6 @@ html, body {
   overflow-x: hidden;
 }
 
-.install-container {
-  width: 100%;
-  box-sizing: border-box;
-  flex: 1 1 100%;
-} 
-
 header, footer {
   width: 100%;
   box-sizing: border-box;
@@ -48,6 +42,12 @@ main {
   align-items: flex-start;
 }
 
+main .install-container {
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1 1 100%;
+}
+
 main a {
   color: white;
   font-weight: bold;
@@ -67,6 +67,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
