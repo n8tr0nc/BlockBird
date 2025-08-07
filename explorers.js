@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('search');
   const listContainer = document.getElementById('list');
   const paginationContainer = document.getElementById('pagination-buttons');
@@ -7,37 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const firstPageButton = document.getElementById('firstPage');
   const lastPageButton = document.getElementById('lastPage');
   const loadingIndicator = document.getElementById('loading');
-  const itemsPerPage = 20; // Updated to 20 items per page to match grid
+
+  const itemsPerPage = 20;
   let currentPage = 1;
   let totalPages = 1;
   let allData = [];
   let filteredData = [];
 
-  const webPageUrl = 'https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vSTKLXEgIRbqLvXOSEOyHxPTkQyND5YfBBLLce-mNxR7f-WIDEAyuy0SrB1u_p2DDVmnCx1413RWIsn/pubhtml?gid=1520699041&single=true'; // Replace with your published web page URL
-
-  function fetchBlockchainData() {
-    showLoading(true);
-    fetch(webPageUrl)
-      .then(response => response.text())
-      .then(data => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(data, 'text/html');
-        const rows = Array.from(doc.querySelectorAll('table tbody tr')).slice(1); // Skip the first row
-        allData = rows.map(row => {
-          const cells = row.querySelectorAll('td');
-          return {
-            name: cells[0].innerText.trim(),
-            link: cells[1].innerText.trim(),
-            category: cells[2].innerText.trim()
-          };
-        });
-        filterAndRender();
-        showLoading(false);
-      })
-      .catch(error => {
-        console.error('<span class="alert-negative"">Error fetching data from the web page:</span>', error);
-        showLoading(false);
-      });
+  function showLoading(isLoading) {
+    loadingIndicator.style.display = isLoading ? 'block' : 'none';
+    listContainer.style.display = isLoading ? 'none' : 'grid';
   }
 
   function renderList(data, page = 1) {
@@ -47,14 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const paginatedItems = data.slice(start, end);
 
     paginatedItems.forEach(item => {
-      const listItem = document.createElement(item.link ? 'a' : 'div');
+      const listItem = document.createElement('a');
       listItem.className = 'list-item';
-      if (item.link) {
-        listItem.href = item.link;
-        listItem.target = '_blank';
-      }
-      listItem.innerHTML = `
-        <div>${item.name}</div>`;
+      listItem.href = item.link || '#';
+      listItem.target = '_blank';
+      listItem.rel = 'noopener noreferrer';
+      listItem.innerHTML = `<div>${item.name}</div>`;
       listContainer.appendChild(listItem);
     });
 
@@ -85,15 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function filterAndRender() {
     const searchTerm = searchInput.value.toLowerCase();
     filteredData = allData.filter(item => item.name.toLowerCase().includes(searchTerm));
-
     renderList(filteredData, currentPage);
   }
 
-  function showLoading(isLoading) {
-    loadingIndicator.style.display = isLoading ? 'block' : 'none';
-    listContainer.style.display = isLoading ? 'none' : 'grid';
-  }
-
+  // Pagination controls
   searchInput.addEventListener('input', () => {
     currentPage = 1;
     filterAndRender();
@@ -123,11 +95,24 @@ document.addEventListener('DOMContentLoaded', function() {
     renderList(filteredData, currentPage);
   });
 
-  // Initial fetch and render
-  fetchBlockchainData();
-});
+  // Load from local JSON only
+  async function loadChains() {
+    showLoading(true);
+    try {
+      const res = await fetch('chains.json');
+      const data = await res.json();
+      allData = data;
+      filteredData = allData;
+      renderList(filteredData, currentPage);
+    } catch (err) {
+      listContainer.innerHTML = '<div class="error">Unable to load explorers.</div>';
+    } finally {
+      showLoading(false);
+    }
+  }
 
-document.addEventListener('DOMContentLoaded', () => {
+  loadChains();
+
   if (typeof initializeTranslations === 'function') {
     initializeTranslations();
   }

@@ -8,7 +8,7 @@ BlockBird is a comprehensive Chrome extension that offers a suite of tools for b
 - **Scanner**: Scan the current webpage for keywords related to airdrops, points, and rewards.
 - **Explorers**: Searchable list of blockchain explorers with pagination.
 - **Wallets**: Manage your crypto wallets for easy copy/paste.
-- **Solana Tokens**: View the most recently added Solana tokens from Jupiter.
+- **Solana Tokens (currently unavailable)**: View the most recently added Solana tokens from Jupiter.
 - **Settings**: Customize the default page and toggle dark mode.
 
 ## Installation
@@ -43,7 +43,7 @@ BlockBird is a comprehensive Chrome extension that offers a suite of tools for b
 2. Add new wallets by entering a label and address, then click "Add".
 3. Manage wallets by editing, deleting, or copying the address to the clipboard.
 
-### Solana Tokens
+### Solana Tokens (currently unavailable)
 
 1. Navigate to the "Tokens" page.
 2. View the most recently added Solana tokens, according to Jupiter (jup.ag).

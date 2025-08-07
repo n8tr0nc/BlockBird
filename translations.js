@@ -34,7 +34,7 @@
       const langMap = {
         en: 'english', id: 'indonesian', es: 'spanish', ru: 'russian', vi: 'vietnamese',
         hi: 'hindi', th: 'thai', zh: 'mandarin', ha: 'hausa', ur: 'urdu',
-        tl: 'filipino', uk: 'ukrainian', pt: 'brazilian'
+        tl: 'filipino', uk: 'ukrainian', pt: 'brazilian', jp: 'japanese'
       };
 
       const userLangSetting = result.language || '';
