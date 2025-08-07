@@ -7,12 +7,12 @@ html, body {
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
 header, nav, footer {
   width: 100%;
-  box-sizing: border-box; /* Ensures padding doesn’t increase width */
+  box-sizing: border-box;
 }
 
 header {
@@ -37,12 +37,12 @@ nav a {
 
 main {
   flex: 1;
-  padding: 2rem 1rem;         /* Add side padding but avoid overflow */
-  max-width: 800px;
+  padding: 2rem 1rem;
+  max-width: 1000px;
   margin: 0 auto;
   background: #222222;
   width: 100%;
-  box-sizing: border-box;     /* Critical to prevent horizontal scroll */
+  box-sizing: border-box;
 }
 
 footer {
@@ -51,5 +51,6 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
