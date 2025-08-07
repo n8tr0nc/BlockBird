@@ -31,7 +31,7 @@ main {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
-  background: white;
+  background: #333333;
   width: 100%;
 }
 footer {
@@ -42,5 +42,6 @@ footer {
   margin-top: 2rem;
   width: 100%;
 }
+
 
 
