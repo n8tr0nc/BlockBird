@@ -45,12 +45,18 @@ main {
   box-sizing: border-box;
 }
 
+main a {
+  color: white;
+  font-weight: bold;
+}
+
 footer {
   background: #333333;
   color: #ccc;
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
