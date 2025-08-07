@@ -22,6 +22,10 @@ header {
   text-align: center;
 }
 
+.logo {
+  width: 100px;
+}
+
 nav {
   background: #003d80;
   padding: 0.5rem;
@@ -56,6 +60,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
