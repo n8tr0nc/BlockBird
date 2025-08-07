@@ -40,7 +40,7 @@ main {
   padding: 2rem 1rem;         /* Add side padding but avoid overflow */
   max-width: 800px;
   margin: 0 auto;
-  background: #333333;
+  background: #222222;
   width: 100%;
   box-sizing: border-box;     /* Critical to prevent horizontal scroll */
 }
@@ -51,3 +51,4 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
