@@ -42,10 +42,11 @@ main a {
 }
 
 main a.install-link {
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   padding: 10px 20px;
   border-radius: 4px;
   background-color: #669900;
+  text-decoration: none;
 }
 
 footer {
@@ -54,6 +55,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
