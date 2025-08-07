@@ -87,4 +87,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For support or inquiries, join our [Telegram group](https://t.me/blockbirdchat).
+For support or inquiries, join our [Telegram group](https://t.me/synthwavelabs).
+
