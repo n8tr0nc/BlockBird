@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title data-translate="settings">Settings</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!--Header-->
+    <div class="header">
+      <div class="heading">
+        <h1 data-translate="settings">Settings</h1>
+        <!--Info-->
+        <a class="info-icon tooltip tooltip-unanchored">
+          <i class="fa-solid fa-circle-info"></i>
+          <span class="tooltiptext" data-translate="settings_help">
+            <p data-translate="settings_description">Configure your BlockBird</p>
+          </span>
+        </a>
+      </div>
+      <div class="toolbar">
+        <!--Settings-->
+        <a href="settings.html" class="settings-icon tooltip tooltip-left">
+          <i class="fa-solid fa-gear"></i><span class="tooltiptext" data-translate="settings">Settings</span>
+        </a>
+        <!--Contact-->
+        <a href="https://synthwave.so/chat" target="_blank" class="telegram-icon tooltip tooltip-left">
+          <i class="fa-brands fa-telegram"></i><span class="tooltiptext" data-translate="contact">Contact</span>
+        </a>
+      </div>
+    </div>
+
+    <!--Content-->
+    <div class="content settings-content">
+      <div id="blockbird-info" class="forms">
+        <label for="info-box" data-translate="version">Version</label>
+        <div class="set-it">
+          <span id="extension-version"></span>
+        </span>
+        </div>
+      </div>
+      <div id="language-form" class="forms">
+        <label for="language-select" data-translate="language">Language</label>
+        <div class="set-it">
+          <select id="language-select" class="settings-select">
+            <option value="english">English (USA)</option>
+            <option value="filipino">Filipino (Philippines)</option>
+            <option value="hausa">Hausa (Nigeria)</option>
+            <option value="hindi">Hindi (India)</option>
+            <option value="indonesian">Indonesian (Indonesia)</option>
+            <option value="japanese">Japanese (Japan)</option>
+            <option value="mandarin">Mandarin (China)</option>
+            <option value="brazilian">Portugese (Brazil)</option>
+            <option value="russian">Russian (Russia)</option>
+            <option value="spanish">Spanish (South America)</option>
+            <option value="thai">Thai (Thailand)</option>
+            <option value="ukrainian">Ukrainian (Ukraine)</option>
+            <option value="urdu">Urdu (Pakistan)</option>
+            <option value="vietnamese">Vietnamese (Vietnam)</option>
+          </select>
+        </div>
+      </div>
+      <div id="page-default-form" class="forms">
+        <label for="default-page-select" data-translate="default_page">Default Page</label>
+        <div class="set-it">
+          <select id="default-page-select" class="settings-select">
+            <option value="/popup.html" data-translate="dashboard">Dashboard</option>
+            <option value="/wallets.html" data-translate="wallets">Wallets</option>
+            <option value="/scanner.html" data-translate="scanner">Scanner</option>
+            <option value="/explorers.html" data-translate="explore">Explore</option>
+          </select>
+        </div>
+      </div>
+      <div id="dark-mode-form" class="forms">
+        <label for="dark-mode-checkbox" data-translate="dark_mode">Dark Mode</label>
+        <div class="set-it">
+          <input type="checkbox" id="dark-mode-checkbox">
+        </div>
+      </div>
+      <div id="sidebar-form" class="forms">
+        <label for="sidepanel-note" data-translate="side_panel">Side Panel</label>
+        <div class="set-it">
+          <span data-translate="side_panel_note">Right-click on the extension icon in the browser toolbar and select "Open side panel". This will allow you to navigate through different tabs and websites while keeping your BlockBird always visible.</span>
+        </div>
+      </div>
+      <div id="about-note" class="forms">
+        <label for="about-note" data-translate="about">About</label>
+        <div class="set-it">
+          <span data-translate="about_note">BlockBird is a community built, powerful and user-friendly browser extension for Chrome, Brave, and Kiwi. It is designed to enhance your blockchain exploration experience.</span>
+        </div>
+      </div>
+      <div id="affiliate-disclaimer" class="forms">
+        <label for="affiliate-disclaimer" data-translate="disclaimer">Disclaimer</label>
+        <div class="set-it">
+          <span data-translate="disclaimer_note">BlockBird may contain affiliate links to third-party websites or tools, which means we might earn a small commission if you use them at no extra cost to you. These links are included only when we believe they offer value to our users, and any support through them helps sustain and improve the BlockBird extension.</span>
+        </div>
+      </div>       
+    </div>
+    <div class="footer">
+      <div id="nav-container"></div>
+    </div>
+
+    <!--Scripts-->
+    <script src="dark-mode.js"></script>
+    <script src="default-page.js"></script>
+    <script src="include-links.js"></script>
+    <script src="panel-layout.js"></script>
+    <script src="translations.js"></script> 
+    <script src="settings.js"></script>
+
+  </body>
+</html>

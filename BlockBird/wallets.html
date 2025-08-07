@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallets</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!--Header-->
+    <div class="header">
+        <div class="heading">
+        <h1 data-translate="wallets">Wallets</h1>
+        <!--Info-->
+        <a class="info-icon tooltip tooltip-unanchored">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="tooltiptext">
+                <p data-translate="wallets_description">Manage your crypto wallets for quick copy/paste</p>
+                <!--<p>1. <strong>Add single wallets</strong> by entering a label and the wallet address. Then click the add button (+).</p>
+                <p>2. <strong>Add multiple wallets</strong> by clicking the import button and selecting a .CSV file with one "label,wallet address" per line.</p>
+                <p>3. <strong>Export</strong> your labeled wallet addresses by clicking the export button, selecting a location, naming the file, and clicking save.</p>
+                <p>4. <strong>Reorder</strong> your wallets by dragging and dropping them (<i class="fas fa-hand"></i>).</p>
+                <p>5. <strong>Copy</strong> a wallet address for pasting by clicking the copy button (<i class="fas fa-copy"></i>).</p>
+                <p>6. <strong>Edit</strong> a wallet label or address by clicking the edit button (<i class="fas fa-edit"></i>).</p>
+                <p>7. <strong>Delete</strong> a wallet from your list by clicking the delete button (<i class="fas fa-trash-alt"></i>).</p>-->
+            </span>
+            </a>
+            </div>
+            <div class="toolbar">
+        <!--Settings-->
+        <a href="settings.html" class="settings-icon tooltip tooltip-left">
+            <i class="fa-solid fa-gear"></i><span class="tooltiptext" data-translate="settings">Settings</span>
+        </a>
+        <!--Contact-->
+        <a href="https://synthwave.so/chat" target="_blank" class="telegram-icon tooltip tooltip-left">
+            <i class="fa-brands fa-telegram"></i><span class="tooltiptext" data-translate="contact">Contact</span>
+        </a>
+        </div>
+    </div>
+    
+    <!-- ADD/EDIT/IMPORT/EXPORT -->
+    <div class="wallets-head">
+        <div id="add-wallet-form">
+            <div class="import-export-group">
+                <button id="import-wallets-button" class="import-export" data-translate="import_csv">Import CSV</button>
+                <button id="export-wallets" class="import-export" data-translate="export_csv">Export CSV</button> 
+            </div>
+            <input type="text" id="wallet-label" placeholder="Label" data-translate="label">
+            <input type="text" id="wallet-address" placeholder="Wallet Address" data-translate="wallet_address">
+            <button id="add-wallet" class="tooltip tooltip-left"><i class="fas fa-plus"></i><span class="tooltiptext" data-translate="">Add/Update Wallet</span></button>
+            <input type="file" id="import-wallets" style="display:none;">
+        </div>
+        <div id="alert-box" style="display: none;" class="alert-message"></div>
+    </div>
+    
+    <h3 data-translate="my_wallets">My Wallets</h3>
+
+    <!-- SEARCH -->
+    <div class="wallets-search">
+        <input type="text" id="wallet-search" data-translate="wallets_search_placeholder" placeholder="Search wallets...">
+    </div>
+
+    <!-- WALLETS LIST -->
+    <div class="content my-wallets" id="wallet-list"></div>
+    
+    <!-- FOOTER NAV -->
+    <div class="footer">
+        <div id="nav-container"></div>
+    </div>
+
+    <!--Scripts-->
+    <script src="dark-mode.js"></script>
+    <script src="default-page.js"></script>
+    <script src="include-links.js"></script>
+    <script src="panel-layout.js"></script>
+    <script src="wallets.js"></script>
+    <script src="translations.js"></script>
+    <script src="sortable.min.js" defer></script>
+
+</body>
+</html>
