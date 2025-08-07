@@ -83,9 +83,10 @@ BlockBird is a comprehensive Chrome extension that offers a suite of tools for b
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Contact
 
 For support or inquiries, join our [Telegram group](https://t.me/synthwavelabs).
+
 
