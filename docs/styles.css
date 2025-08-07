@@ -7,6 +7,12 @@ html, body {
   color: #ffffff;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header, nav, footer {
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn’t increase width */
 }
 
 header {
@@ -14,14 +20,12 @@ header {
   color: white;
   padding: 1rem;
   text-align: center;
-  width: 100%;
 }
 
 nav {
   background: #003d80;
   padding: 0.5rem;
   text-align: center;
-  width: 100%;
 }
 
 nav a {
@@ -32,12 +36,13 @@ nav a {
 }
 
 main {
-  padding: 2rem;
+  flex: 1;
+  padding: 2rem 1rem;         /* Add side padding but avoid overflow */
   max-width: 800px;
   margin: 0 auto;
   background: #333333;
   width: 100%;
-  flex: 1; /* Pushes footer to bottom if there's not enough content */
+  box-sizing: border-box;     /* Critical to prevent horizontal scroll */
 }
 
 footer {
@@ -45,5 +50,4 @@ footer {
   color: #ccc;
   text-align: center;
   padding: 1rem;
-  width: 100%;
 }
