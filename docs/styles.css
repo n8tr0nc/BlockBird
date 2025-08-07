@@ -3,11 +3,16 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
-  background: #222222;
+  background-color: #222222;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  background-image: url('images/logo-001.webp');
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 header, footer {
@@ -34,7 +39,7 @@ main {
   flex: 1;
   max-width: 800px;
   margin: 0 auto;
-  background: #222222;
+  background: transparent;
   width: 100%;
   box-sizing: border-box;
   padding: 2rem 0;
@@ -82,6 +87,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
