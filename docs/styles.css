@@ -1,17 +1,14 @@
-body {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: Arial, sans-serif;
   background: #222222;
   color: #ffffff;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
 header {
   background: #0056b3;
   color: white;
@@ -19,35 +16,34 @@ header {
   text-align: center;
   width: 100%;
 }
+
 nav {
   background: #003d80;
   padding: 0.5rem;
   text-align: center;
   width: 100%;
 }
+
 nav a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
 }
+
 main {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
   background: #333333;
   width: 100%;
+  flex: 1; /* Pushes footer to bottom if there's not enough content */
 }
+
 footer {
   background: #222;
   color: #ccc;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
   width: 100%;
 }
-
-
-
-
-
