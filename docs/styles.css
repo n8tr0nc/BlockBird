@@ -53,6 +53,7 @@ main a.install-link {
   border-radius: 4px;
   background-color: #669900;
   text-decoration: none;
+  text-align: center;
 }
 
 main a.install-link:hover {
@@ -77,6 +78,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
