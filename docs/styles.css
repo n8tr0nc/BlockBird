@@ -159,9 +159,10 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-  main .screens-container .screenshot-left {
+  main .screens-container .screenshot {
     width: 100%;
     flex-grow: 1;
+    max-width: 300px;
   }
   
   main .screens-container .screens-description {
@@ -169,3 +170,4 @@ footer {
     flex-grow: 1;
   }
 }
+
