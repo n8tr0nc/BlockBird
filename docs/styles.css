@@ -158,49 +158,14 @@ footer {
   padding: 1rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 600px) {
+  main .screens-container .screenshot-left {
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  main .screens-container .screens-description {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
