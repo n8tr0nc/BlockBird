@@ -67,6 +67,10 @@ main .about-container {
   text-align: center;
 }
 
+main .about-container p {
+  width: 100%;
+}
+
 main .screens-container {
   display: flex;
   flex-direction: row;
@@ -153,6 +157,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
