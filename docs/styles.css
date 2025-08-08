@@ -80,6 +80,16 @@ main .screens-container {
   text-align: center;
 }
 
+main .screens-container .screenshot-left {
+  width: 45%;
+  flex-grow: 1;
+}
+
+main .screens-container .screens-description {
+  width: 45%;
+  flex-grow: 1;
+}
+
 main .privacy-container {
   display: block;
   width: 100%;
@@ -142,6 +152,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 
 
 
